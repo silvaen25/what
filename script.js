@@ -1,4 +1,3 @@
-// script.js
 const perguntas = [
   "1. What (o quê): Descreva a tarefa ou ação específica.",
   "2. Why (por quê): Explique a razão da tarefa.",
@@ -24,10 +23,14 @@ function mostrarPergunta() {
 
 function proximaPergunta() {
   const resposta = document.getElementById("resposta").value.trim();
-  if (resposta === "") return alert("Digite sua resposta!");
-  respostas.push(resposta);
+  if (resposta === "") {
+    alert("Digite sua resposta!");
+    return;
+  }
 
+  respostas.push(resposta);
   indice++;
+
   if (indice < perguntas.length) {
     mostrarPergunta();
   } else {
@@ -46,8 +49,11 @@ function mostrarFolheto() {
 
 function finalizar() {
   const escolha = document.querySelector("input[name='concluido']:checked");
-  if (!escolha) return alert("Selecione se conseguiu concluir!");
-  
+  if (!escolha) {
+    alert("Selecione se conseguiu concluir!");
+    return;
+  }
+
   if (escolha.value === "sim") {
     mostrarTela("tela-vitoria");
   } else {
@@ -58,5 +64,4 @@ function finalizar() {
 function mostrarTela(id) {
   document.querySelectorAll(".tela").forEach(t => t.classList.add("hidden"));
   document.getElementById(id).classList.remove("hidden");
-  document.getElementById(id).classList.add("active");
 }
