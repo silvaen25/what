@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Logístico - Os 7 Porquês</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bg-music" src="assets/musica.mp3" loop autoplay></audio>
+
+  <div class="game-container">
+    <div id="tela-inicial" class="tela">
+      <h1>📦 Missão Logística</h1>
+      <p>Desvende o problema se perguntando 7 vezes.</p>
+      <button onclick="iniciarJogo()">Iniciar Missão</button>
+    </div>
+
+    <div id="tela-pergunta" class="tela hidden">
+      <h2 id="pergunta"></h2>
+      <textarea id="resposta" placeholder="Digite sua resposta aqui..."></textarea>
+      <button onclick="proximaPergunta()">Avançar</button>
+    </div>
+
+    <div id="tela-folheto" class="tela hidden">
+      <h2>📜 Folheto de Análise</h2>
+      <div id="folheto-respostas"></div>
+      <p>Agora, escreva se conseguiu resolver o problema:</p>
+      <textarea id="analise-final" placeholder="Digite sua conclusão..."></textarea>
+      <div>
+        <label><input type="radio" name="concluido" value="sim"> Sim</label>
+        <label><input type="radio" name="concluido" value="nao"> Não</label>
+      </div>
+      <button onclick="finalizar()">Prosseguir</button>
+    </div>
+
+    <div id="tela-vitoria" class="tela hidden">
+      <h1>🎉 Você venceu!</h1>
+      <p>Parabéns, problema logístico resolvido com sucesso!</p>
+    </div>
+
+    <div id="tela-fracasso" class="tela hidden">
+      <h1>💀 Missão fracassada!</h1>
+      <p>O problema continua sem solução... tente novamente.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
