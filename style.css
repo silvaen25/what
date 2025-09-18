@@ -1,10 +1,10 @@
-/* style.css */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: url('assets/cenario.jpg') no-repeat center center/cover;
   color: #fff;
   text-align: center;
+  height: 100vh;
 }
 
 .game-container {
@@ -16,11 +16,11 @@ body {
 }
 
 .tela {
-  display: none;
+  display: block;
 }
 
-.tela.active {
-  display: block;
+.hidden {
+  display: none;
 }
 
 button {
@@ -44,4 +44,5 @@ textarea {
   border-radius: 10px;
   padding: 10px;
   font-size: 14px;
+  margin-top: 10px;
 }
