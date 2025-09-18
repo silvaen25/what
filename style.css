@@ -1,0 +1,47 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('assets/cenario.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+.game-container {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 5% auto;
+}
+
+.tela {
+  display: none;
+}
+
+.tela.active {
+  display: block;
+}
+
+button {
+  background: #00c853;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00e676;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
